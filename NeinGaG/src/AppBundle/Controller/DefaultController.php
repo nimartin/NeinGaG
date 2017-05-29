@@ -11,16 +11,11 @@ class DefaultController extends Controller
     /**
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
+    public function getAllGags(Request $request)
     {
-        // replace this example code with whatever you need
-        // return $this->render('default/index.html.twig', [
-        //     'base_dir' => realpath($this->getParameter('kernel.root_dir').'/..').DIRECTORY_SEPARATOR,
-        // ]);
+       
 
-        $number = mt_rand(0, 100);
-
-        return $this->render('lucky/number.html.twig', array(
+        return $this->render('default/number.html.twig', array(
             'number' => $number,
         ));
     }

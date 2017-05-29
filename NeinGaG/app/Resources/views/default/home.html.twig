@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+	<h1>Posts</h1>
+	<ul>
+	    {% for post in posts %}
+	        <li>{{ post.title }}</li>
+	        <li>
+	        	<img src="{{asset('uploads/images/' ~ post.image) }}"> </img>
+	        </li>
+
+	    {% endfor %}
+	</ul>
+{% endblock %}

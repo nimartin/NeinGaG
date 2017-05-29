@@ -1,0 +1,24 @@
+AppBundle\Entity\Post:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PostRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        image:
+            type: string
+            length: 255
+        title:
+            type: string
+            length: 255
+        user:
+            type: object
+        comments:
+            type: array
+        note:
+            type: integer
+    lifecycleCallbacks: {  }

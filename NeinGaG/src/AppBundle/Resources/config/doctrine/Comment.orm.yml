@@ -1,0 +1,19 @@
+AppBundle\Entity\Comment:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CommentRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        user:
+            type: object
+        text:
+            type: string
+            length: 255
+        date:
+            type: datetime
+    lifecycleCallbacks: {  }
