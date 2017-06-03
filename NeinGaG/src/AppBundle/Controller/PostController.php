@@ -37,7 +37,7 @@ class PostController extends Controller
             // Update the 'brochure' property to store the PDF file name
             // instead of its contents
             $post->setImage($fileName);
-            $post->setUser($this->getDoctrine()->getRepository('AppBundle:User')->findOneByLogin('claudusd'));
+            $post->setUser($this->getUser());
             $post->setNote(0);
             $post->setComments(array());
 
@@ -46,7 +46,7 @@ class PostController extends Controller
             $em->flush();
 
 
-            return $this->redirectToRoute('/home');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('default/add.html.twig', array(

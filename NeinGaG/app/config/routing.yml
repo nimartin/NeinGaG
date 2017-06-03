@@ -2,11 +2,17 @@ app:
     resource: '@AppBundle/Controller/'
     type: annotation
 
-register:
-    path: /register
-    defaults: { _controller: AppBundle:Login:register, _format: html }
-    requirements:
-        _method: GET
+# register:
+#     path: /register
+#     defaults: { _controller: AppBundle:Login:register, _format: html }
+#     requirements:
+#         _method: GET
+
+# login:
+#     path: /login
+#     defaults: { _controller: AppBundle:Post:addPost, _format: html }
+#     requirements:
+#         _method: GET
 
 home:
     path: /home
@@ -19,5 +25,10 @@ add:
     defaults: { _controller: AppBundle:Post:addPost, _format: html }
     requirements:
         _method: GET
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
 
   
